@@ -1,0 +1,12 @@
+{
+    "name": "Central de Itens de Tourmaline",
+    "short_name": "CIT",
+    "description": "Um lugar com todas as lojas de Tourmaline",
+    "manifest_version": 1,
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "icons": []
+  }
+  

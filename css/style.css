@@ -1,0 +1,174 @@
+/* Reset básico para remover margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e estilo base */
+body {
+    font-family: 'Georgia', serif;
+    background: #2f2f2f;
+    color: #dcdcdc;
+    line-height: 1.6;
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Contêiner geral */
+.container {
+    flex: 1;
+}
+
+/* Cabeçalho */
+header {
+    background: rgba(43, 43, 43, 0.9);
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #dcdcdc;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    padding: 5px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    border-color: #dcdcdc;
+    color: #fff;
+}
+
+/* Conteúdo principal */
+main {
+    flex: 1;
+    padding: 40px 10%;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Estilo dos cards */
+.item-card {
+    background: rgba(33, 33, 33, 0.8);
+    color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px; /* Tamanho fixo */
+    width: 250px; /* Tamanho fixo para manter os cards iguais */
+    margin: auto;
+}
+
+/* Centraliza a imagem e a torna de tamanho fixo */
+.item-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 auto 10px; /* Centraliza a imagem */
+}
+
+/* Nome e preço */
+.name-price {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    word-wrap: break-word; /* Permite quebrar palavras longas */
+}
+
+.name-price h2 {
+    font-size: 1.4rem;
+    color: #e5e5e5;
+    text-align: center;
+    margin: 0; /* Remove margens extras */
+    height: auto; /* Permite que o título ocupe o espaço necessário */
+    line-height: 1.2; /* Para melhorar o espaçamento entre linhas, se necessário */
+    word-wrap: break-word; /* Quebra as palavras longas */
+}
+
+.name-price p {
+    font-size: 1rem;
+    color: #b8b8b8;
+    margin-top: 5px;
+}
+
+/* Efeito de ampliação e exibição da descrição */
+.item-card:hover {
+    transform: scale(1.05);
+}
+
+.item-card:hover .item-description {
+    opacity: 1; /* Exibe a descrição ao passar o mouse */
+}
+
+/* Descrição do item (inicialmente escondida) */
+.item-description {
+    margin-top: 10px;
+    color: #b8b8b8;
+    font-size: 1rem;
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Rodapé */
+footer {
+    background: rgba(43, 43, 43, 0.9);
+    color: #bbb;
+    padding: 20px 0;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+    font-style: italic;
+}
+
+/* Estilo geral para o layout */
+.site-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+}
