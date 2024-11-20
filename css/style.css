@@ -102,18 +102,19 @@ main {
     height: 150px;
     object-fit: cover;
     border-radius: 10px;
-    margin: 0 auto 10px; /* Centraliza a imagem */
+    margin: 0 auto 5px; /* Reduzido o margin-bottom para diminuir o espaço entre a foto e o nome */
 }
 
-/* Nome e preço */
+/* Nome, raridade e preço */
 .name-price {
-    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    height: 100px; /* Alterado para acomodar todos os elementos */
     word-wrap: break-word; /* Permite quebrar palavras longas */
+    margin-top: 5px; /* Reduzido o margin-top para diminuir o espaço acima do nome */
+    transform: translateY(-25px); /* Subir um pouquinho só os itens dentro do card */
 }
 
 .name-price h2 {
@@ -122,14 +123,23 @@ main {
     text-align: center;
     margin: 0; /* Remove margens extras */
     height: auto; /* Permite que o título ocupe o espaço necessário */
-    line-height: 1.2; /* Para melhorar o espaçamento entre linhas, se necessário */
+    line-height: 1.2; /* Para melhorar o espaçamento entre linhas */
     word-wrap: break-word; /* Quebra as palavras longas */
 }
 
+/* Raridade do item (sutil e acima do preço) */
+.item-rarity {
+    font-size: 0.9em;
+    color: #6c757d; /* Uma cor sutil para a raridade */
+    margin-top: 3px; /* Sutilmente acima do preço */
+}
+
+/* Preço do item */
 .name-price p {
     font-size: 1rem;
     color: #b8b8b8;
-    margin-top: 5px;
+    margin-top: 3px;
+    
 }
 
 /* Efeito de ampliação e exibição da descrição */
@@ -137,18 +147,22 @@ main {
     transform: scale(1.05);
 }
 
+/*
 .item-card:hover .item-description {
-    opacity: 1; /* Exibe a descrição ao passar o mouse */
+    opacity: 1;  Exibe a descrição ao passar o mouse 
 }
+*/
 
-/* Descrição do item (inicialmente escondida) */
+/* Descrição do item (inicialmente escondida) 
 .item-description {
-    margin-top: 10px;
+    margin-top: 12px;
     color: #b8b8b8;
     font-size: 1rem;
-    opacity: 0; /* Inicialmente invisível */
+    opacity: 0;  
     transition: opacity 0.3s ease-in-out;
+
 }
+*/
 
 /* Rodapé */
 footer {
@@ -171,4 +185,72 @@ footer p {
     gap: 20px;
     justify-items: center;
     padding: 20px;
+}
+
+/* Estilos para o modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none; /* Oculto por padrão */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    display: flex;
+    background: #2f2f2f;
+    color: #dcdcdc;
+    padding: 20px;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    text-align: left;
+    position: relative;
+}
+
+.modal-content img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.modal-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modal-details h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.modal-details .item-rarity,
+.modal-details .item-price {
+    font-size: 1rem;
+    color: #b8b8b8;
+    margin-top: 5px;
+}
+
+.modal-details p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.2rem;
+    color: #dcdcdc;
+    cursor: pointer;
 }
