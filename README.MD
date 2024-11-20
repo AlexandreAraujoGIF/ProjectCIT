@@ -10,6 +10,14 @@ Este é um projeto de uma Central de Itens para um cenário próprio de RPG que 
 - CSS
 - JavaScript (ES6+)
 
+## Futuras Atualizações
+
+- Barra de Pesquiva, Favoritos, Filtros
+- Itens mais vendidos
+- Carrinho de Compras somando o preço dos produtos
+- Página inicial com mercantes, onde é possivel clicar na foto deles pra ver quais itens estão disponiveis no estoque de cada um.
+- Botão para Sugerir Troca a um mercante
+- Incluir banco de dados PHP / MySQL
 
 ## Estrutura de Arquivos
 
